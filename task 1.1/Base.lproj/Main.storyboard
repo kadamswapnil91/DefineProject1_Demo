@@ -132,7 +132,7 @@
                                                         </connections>
                                                     </switch>
                                                 </subviews>
-                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="0.46915132705479451" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.070588238537311554" green="0.027450980618596077" blue="0.08235294371843338" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="wIn-Dp-9VC" secondAttribute="trailing" constant="16" id="2rx-uH-bQA"/>
                                                     <constraint firstItem="wIn-Dp-9VC" firstAttribute="leading" secondItem="Uua-1D-RAy" secondAttribute="trailing" constant="112" id="4Ez-Yl-6Hv"/>
@@ -162,7 +162,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0fw-Ef-MP8" firstAttribute="top" secondItem="f48-lr-Aor" secondAttribute="bottom" constant="18" id="2el-lC-zv7"/>
                                             <constraint firstItem="zIM-MD-G1L" firstAttribute="top" secondItem="0fw-Ef-MP8" secondAttribute="bottom" constant="8" id="6PV-tn-pyC"/>
