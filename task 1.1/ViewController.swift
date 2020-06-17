@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController ,UITextFieldDelegate{
     
+    @IBOutlet weak var btn_next: UIButton!
+    
+    @IBAction func btn_next(_ sender: UIButton) {
+        let secview: secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "secondViewController") as! secondViewController
+        
+        self.navigationController?.pushViewController(secview, animated: true)
+        
+    }
+    
     @IBAction func slider_action(_ sender: UISlider) {
         sider_status.text = String(Int(sender.value))
     }
