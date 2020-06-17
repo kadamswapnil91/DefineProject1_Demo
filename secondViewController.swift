@@ -8,28 +8,69 @@
 
 import UIKit
 
-class secondViewController: UIViewController {
+class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+  
+   
+    
+    var weekarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
+    @IBOutlet weak var datepicker: UIDatePicker!
+    
+    @IBAction func Act_datepicker(_ sender: UIDatePicker) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from:datepicker.date )
+        lbl_datepicker.text = strDate
+        
+        
+    }
+    
+    //@IBOutlet weak var lbl_datepicker: UILabel!
+    
+    @IBOutlet weak var lbl_datepicker: UILabel!
+    
+    
+    
+    
+    @IBOutlet weak var pickerview: UIPickerView!
+    
+    @IBOutlet weak var btn_savepickerview: UIButton!
+    
+    @IBAction func btn_Savepickerdata(_ sender: Any)
+    {
+        self.lbl_dayshow.text = self.weekarray[self.pickerview.selectedRow(inComponent: (0))]
+        
+    }
+    
+    @IBOutlet weak var lbl_dayshow: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pickerview.delegate = self
+        self.pickerview.dataSource = self
 
-        // Do any additional setup after loading the view.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return weekarray.count
+        
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.weekarray[row]
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

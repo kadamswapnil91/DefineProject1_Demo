@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896.79999999999995" y="110.19490254872565"/>
+            <point key="canvasLocation" x="-839" y="109"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="Xby-XM-U2G">
@@ -245,13 +245,139 @@
                     <view key="view" contentMode="scaleToFill" id="coA-kL-X8G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pf4-kE-tfO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUC-CH-m1f">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QT5-m6-YDp">
+                                                <rect key="frame" x="16" y="55" width="343" height="260"/>
+                                                <subviews>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="JGQ-GS-62P">
+                                                        <rect key="frame" x="1" y="1" width="341" height="197"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="197" id="bwh-ku-LyW"/>
+                                                        </constraints>
+                                                        <date key="date" timeIntervalSinceReferenceDate="614068304.03087997">
+                                                            <!--2020-06-17 06:31:44 +0000-->
+                                                        </date>
+                                                        <connections>
+                                                            <action selector="Act_datepicker:" destination="QJY-SG-b7W" eventType="valueChanged" id="45X-gf-SXb"/>
+                                                        </connections>
+                                                    </datePicker>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-wd-2Dc">
+                                                        <rect key="frame" x="30" y="213" width="283" height="39"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.17752695320824097" blue="0.12171571444333895" alpha="0.19" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="JGQ-GS-62P" firstAttribute="top" secondItem="QT5-m6-YDp" secondAttribute="top" constant="1" id="4U6-ra-tZZ"/>
+                                                    <constraint firstAttribute="height" constant="260" id="Aez-50-se4"/>
+                                                    <constraint firstItem="PIp-wd-2Dc" firstAttribute="top" secondItem="JGQ-GS-62P" secondAttribute="bottom" constant="15" id="BRp-uH-Y9c"/>
+                                                    <constraint firstAttribute="trailing" secondItem="PIp-wd-2Dc" secondAttribute="trailing" constant="30" id="KWZ-LS-evo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="JGQ-GS-62P" secondAttribute="trailing" constant="1" id="Q4z-TT-Raq"/>
+                                                    <constraint firstItem="JGQ-GS-62P" firstAttribute="leading" secondItem="QT5-m6-YDp" secondAttribute="leading" constant="1" id="YJP-Gd-nLP"/>
+                                                    <constraint firstAttribute="bottom" secondItem="PIp-wd-2Dc" secondAttribute="bottom" constant="8" id="ZaG-sH-B2S"/>
+                                                    <constraint firstItem="PIp-wd-2Dc" firstAttribute="leading" secondItem="QT5-m6-YDp" secondAttribute="leading" constant="30" id="q1J-ed-xRc"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zx6-sP-h4b">
+                                                <rect key="frame" x="16" y="335" width="343" height="312"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txq-3m-O5k">
+                                                        <rect key="frame" x="1" y="1" width="341" height="208"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="208" id="7pq-0p-zhk"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="QJY-SG-b7W" id="jjJ-UC-WrU"/>
+                                                            <outlet property="delegate" destination="QJY-SG-b7W" id="Vjs-dy-HCW"/>
+                                                        </connections>
+                                                    </pickerView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDJ-P3-0qR">
+                                                        <rect key="frame" x="8" y="248" width="89" height="48"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <state key="normal" title="Save"/>
+                                                        <connections>
+                                                            <action selector="btn_Savepickerdata:" destination="QJY-SG-b7W" eventType="touchUpInside" id="p4m-AG-MIt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64V-E4-k8Y">
+                                                        <rect key="frame" x="122" y="248" width="213" height="48"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="213" id="HjJ-rV-Pa8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.88285215736040612" green="0.15673005362951542" blue="0.10745698108096494" alpha="0.19" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="64V-E4-k8Y" secondAttribute="bottom" constant="16" id="322-53-atA"/>
+                                                    <constraint firstItem="txq-3m-O5k" firstAttribute="top" secondItem="zx6-sP-h4b" secondAttribute="top" constant="1" id="8uf-ut-dcq"/>
+                                                    <constraint firstItem="64V-E4-k8Y" firstAttribute="leading" secondItem="kDJ-P3-0qR" secondAttribute="trailing" constant="25" id="Ahg-50-XYy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="txq-3m-O5k" secondAttribute="trailing" constant="1" id="HIT-Be-YkV"/>
+                                                    <constraint firstItem="64V-E4-k8Y" firstAttribute="top" secondItem="txq-3m-O5k" secondAttribute="bottom" constant="39" id="ICp-TZ-VG6"/>
+                                                    <constraint firstItem="kDJ-P3-0qR" firstAttribute="leading" secondItem="zx6-sP-h4b" secondAttribute="leading" constant="8" id="OcG-ho-nI5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="64V-E4-k8Y" secondAttribute="trailing" constant="8" id="UWR-IO-ZIo"/>
+                                                    <constraint firstItem="kDJ-P3-0qR" firstAttribute="top" secondItem="txq-3m-O5k" secondAttribute="bottom" constant="39" id="gJD-9Y-8Dz"/>
+                                                    <constraint firstAttribute="bottom" secondItem="kDJ-P3-0qR" secondAttribute="bottom" constant="16" id="hs8-sN-Yxb"/>
+                                                    <constraint firstItem="txq-3m-O5k" firstAttribute="leading" secondItem="zx6-sP-h4b" secondAttribute="leading" constant="1" id="uyu-aH-RUr"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <constraints>
+                                            <constraint firstItem="zx6-sP-h4b" firstAttribute="leading" secondItem="GUC-CH-m1f" secondAttribute="leading" constant="16" id="EVq-5x-mqW"/>
+                                            <constraint firstItem="zx6-sP-h4b" firstAttribute="top" secondItem="QT5-m6-YDp" secondAttribute="bottom" constant="20" id="JRZ-1o-KRW"/>
+                                            <constraint firstItem="QT5-m6-YDp" firstAttribute="top" secondItem="GUC-CH-m1f" secondAttribute="top" constant="55" id="aN1-8A-MNO"/>
+                                            <constraint firstItem="QT5-m6-YDp" firstAttribute="leading" secondItem="GUC-CH-m1f" secondAttribute="leading" constant="16" id="eb5-9U-031"/>
+                                            <constraint firstAttribute="trailing" secondItem="QT5-m6-YDp" secondAttribute="trailing" constant="16" id="nO7-7u-FgJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="zx6-sP-h4b" secondAttribute="trailing" constant="16" id="uPj-cl-3vo"/>
+                                            <constraint firstAttribute="bottom" secondItem="zx6-sP-h4b" secondAttribute="bottom" constant="20" id="unK-If-oyd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GUC-CH-m1f" firstAttribute="leading" secondItem="pf4-kE-tfO" secondAttribute="leading" id="A9A-M4-E2n"/>
+                                    <constraint firstItem="GUC-CH-m1f" firstAttribute="top" secondItem="pf4-kE-tfO" secondAttribute="top" id="BLx-JA-euT"/>
+                                    <constraint firstAttribute="bottom" secondItem="GUC-CH-m1f" secondAttribute="bottom" id="FnW-Dk-2iG"/>
+                                    <constraint firstAttribute="trailing" secondItem="GUC-CH-m1f" secondAttribute="trailing" id="Kgz-Mv-iiy"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GUC-CH-m1f" firstAttribute="width" secondItem="coA-kL-X8G" secondAttribute="width" id="8Np-wX-FhV"/>
+                            <constraint firstItem="pf4-kE-tfO" firstAttribute="top" secondItem="coA-kL-X8G" secondAttribute="top" id="I4C-wf-gfK"/>
+                            <constraint firstItem="pf4-kE-tfO" firstAttribute="bottom" secondItem="U4j-ZD-p4Q" secondAttribute="bottom" id="Kdp-Os-fr6"/>
+                            <constraint firstItem="pf4-kE-tfO" firstAttribute="trailing" secondItem="U4j-ZD-p4Q" secondAttribute="trailing" id="ZA5-8e-gGL"/>
+                            <constraint firstItem="GUC-CH-m1f" firstAttribute="height" secondItem="coA-kL-X8G" secondAttribute="height" id="eaL-zG-Cek"/>
+                            <constraint firstItem="pf4-kE-tfO" firstAttribute="leading" secondItem="U4j-ZD-p4Q" secondAttribute="leading" id="x3S-1Z-0Se"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="U4j-ZD-p4Q"/>
                     </view>
+                    <connections>
+                        <outlet property="btn_savepickerview" destination="kDJ-P3-0qR" id="DUQ-k9-OdX"/>
+                        <outlet property="datepicker" destination="JGQ-GS-62P" id="sct-mL-zsq"/>
+                        <outlet property="lbl_datepicker" destination="PIp-wd-2Dc" id="sgy-1D-m4e"/>
+                        <outlet property="lbl_dayshow" destination="64V-E4-k8Y" id="Cau-yb-J7L"/>
+                        <outlet property="pickerview" destination="txq-3m-O5k" id="u3f-F1-Lz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mn-Qo-7fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560.8" y="110.19490254872565"/>
+            <point key="canvasLocation" x="-68" y="108.39580209895054"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0DY-eM-dCY">
@@ -269,7 +395,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmI-N5-O9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="110"/>
+            <point key="canvasLocation" x="-1540" y="110"/>
         </scene>
     </scenes>
     <resources>
