@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6373DD9D249B43B5008C7E15 /* ThirdviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373DD9C249B43B5008C7E15 /* ThirdviewViewController.swift */; };
+		6373DD9F249B441C008C7E15 /* customCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */; };
 		6376C8142499E78400B80BCB /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376C8132499E78400B80BCB /* secondViewController.swift */; };
 		63F2419E24979D4000A9A917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F2419D24979D4000A9A917 /* AppDelegate.swift */; };
 		63F241A024979D4000A9A917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F2419F24979D4000A9A917 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6373DD9C249B43B5008C7E15 /* ThirdviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdviewViewController.swift; sourceTree = "<group>"; };
+		6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCollectionViewCell.swift; sourceTree = "<group>"; };
 		6376C8132499E78400B80BCB /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		63F2419A24979D4000A9A917 /* task 1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task 1.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F2419D24979D4000A9A917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +80,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6373DD9B249B4399008C7E15 /* Third View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6373DD9C249B43B5008C7E15 /* ThirdviewViewController.swift */,
+				6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */,
+			);
+			path = "Third View Controller";
+			sourceTree = "<group>";
+		};
 		63F2419124979D4000A9A917 = {
 			isa = PBXGroup;
 			children = (
+				6373DD9B249B4399008C7E15 /* Third View Controller */,
 				6376C8132499E78400B80BCB /* secondViewController.swift */,
 				63F2419C24979D4000A9A917 /* task 1.1 */,
 				63F241B124979D4700A9A917 /* task 1.1Tests */,
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63F241A024979D4000A9A917 /* ViewController.swift in Sources */,
+				6373DD9D249B43B5008C7E15 /* ThirdviewViewController.swift in Sources */,
 				6376C8142499E78400B80BCB /* secondViewController.swift in Sources */,
+				6373DD9F249B441C008C7E15 /* customCollectionViewCell.swift in Sources */,
 				63F2419E24979D4000A9A917 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

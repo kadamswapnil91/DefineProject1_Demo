@@ -10,9 +10,7 @@ import UIKit
 
 class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
   
-   
-    
-    var weekarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+   var weekarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
     @IBOutlet weak var datepicker: UIDatePicker!
     
@@ -28,9 +26,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
         
     }
     
-    //@IBOutlet weak var lbl_datepicker: UILabel!
-    
-    @IBOutlet weak var lbl_datepicker: UILabel!
+   @IBOutlet weak var lbl_datepicker: UILabel!
     
     
     
@@ -51,6 +47,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
         self.pickerview.delegate = self
         self.pickerview.dataSource = self
 
