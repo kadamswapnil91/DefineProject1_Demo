@@ -11,6 +11,18 @@ import UIKit
 class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
     
+    
+    @IBAction func btn_NextToForth(_ sender: UIButton) {
+        
+        let forthview: ForthViewController = self.storyboard?.instantiateViewController(withIdentifier: "ForthViewController") as! ForthViewController
+        
+        self.navigationController?.pushViewController(forthview, animated: true)
+        
+    }
+    
+    
+    
+    
     @IBAction func btn_BackToSecond(_ sender: UIButton)
     {
         
