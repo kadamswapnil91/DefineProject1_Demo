@@ -12,6 +12,18 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
   
    var weekarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
+    
+    @IBAction func btn_NextToThird(_ sender: UIButton) {
+
+        let thirdView: ThirdviewViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThirdviewViewController") as! ThirdviewViewController
+
+        self.navigationController?.pushViewController(thirdView, animated: true)
+
+        
+    }
+    
+    
+    
     @IBOutlet weak var datepicker: UIDatePicker!
     
     @IBAction func Act_datepicker(_ sender: UIDatePicker) {
@@ -47,7 +59,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
         self.pickerview.delegate = self
         self.pickerview.dataSource = self
 
@@ -67,7 +79,11 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
         
     }
     
-
+    @IBAction func btn_Back(_ sender: Any) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 
 }

@@ -11,7 +11,13 @@ import UIKit
 class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
     
-
+    @IBAction func btn_BackToSecond(_ sender: UIButton)
+    {
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
     
 
     @IBOutlet weak var collectionview: UICollectionView!
@@ -23,6 +29,7 @@ class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = true
 
         // Do any additional setup after loading the view.
     }
