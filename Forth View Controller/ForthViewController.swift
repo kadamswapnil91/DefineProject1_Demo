@@ -15,6 +15,14 @@ class ForthViewController: UIViewController {
         
     }
     
+    @IBAction func btn_NextToFifth(_ sender: UIButton) {
+        let fifthdata : FifthViewController = self.storyboard?.instantiateViewController(withIdentifier: "FifthViewController") as! FifthViewController
+        
+        self.navigationController?.pushViewController(fifthdata, animated: true)
+        
+    }
+    
+    
 
     let tabBar = UITabBarController()
     

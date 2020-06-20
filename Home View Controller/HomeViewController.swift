@@ -8,8 +8,39 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UISearchBarDelegate {
+    
+    
+    @IBOutlet weak var isSearching: UISearchBar!
+    
+        
+    
+    
+    var menutag : Int = 0
+    @IBAction func btn_menu(_ sender: UIButton) {
+        
+       
+        if (menutag == 0)
+        {
+            menuSidebar.isHidden = false;
+            menutag = 1;
+            
+        }
+        else if (menutag == 1)
+        {
+            menuSidebar.isHidden = true;
+            menutag = 0;
+            
+        }
 
+    
+        
+    }
+    
+    @IBOutlet weak var menuSidebar: UIView!
+    
+    
+    
     
     @IBAction func btn_assignment1(_ sender: UIButton) {
         let firstview : ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
@@ -41,16 +72,16 @@ class HomeViewController: UIViewController {
         
     }
     
-//    @IBAction func btn_assignment5(_ sender: UIButton) {
-//        let fifthtview : fifthViewController = self.storyboard?.instantiateViewController(withIdentifier: "fifthViewController") as! fifthViewController
-//
-//        self.navigationController?.pushViewController(fifthtview, animated: true)
-//
-//    }
-//
-//
-//    @IBAction func btn_assignment6(_ sender: UIButton) {
-//    }
+    @IBAction func btn_assignment5(_ sender: UIButton) {
+        let fifthdata : FifthViewController = self.storyboard?.instantiateViewController(withIdentifier: "FifthViewController") as! FifthViewController
+
+        self.navigationController?.pushViewController(fifthdata, animated: true)
+
+    }
+
+
+    @IBAction func btn_assignment6(_ sender: UIButton) {
+    }
     
     
     
@@ -59,6 +90,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+   let menutag = 0
+        menuSidebar.isHidden = true
 
         // Do any additional setup after loading the view.
     }

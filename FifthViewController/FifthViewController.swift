@@ -8,7 +8,44 @@
 
 import UIKit
 
-class FifthViewController: UIViewController {
+class FifthViewController: UIViewController , Datapass {
+    
+    @IBAction func btn_BackToPrevious(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBOutlet weak var lbl_name: UILabel!
+    
+    @IBOutlet weak var lbl_city: UILabel!
+    
+    @IBOutlet weak var lbl_contact: UILabel!
+    
+    
+    @IBAction func btn_signup(_ sender: UIButton) {
+        
+        let fifthdata : fifthdataViewController = self.storyboard?.instantiateViewController(withIdentifier: "fifthdataViewController") as! fifthdataViewController
+        fifthdata.delegate=self
+        self.navigationController?.pushViewController(fifthdata, animated: true)
+        
+        
+        
+        
+    }
+    
+    
+    func Datapassing(name: String, city: String, contact: String)
+    {
+        
+        lbl_name.text = name
+        lbl_city.text = city
+        lbl_contact.text = contact
+        
+        
+        
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
