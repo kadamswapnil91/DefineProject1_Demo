@@ -11,6 +11,7 @@
 		6373DD9F249B441C008C7E15 /* customCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */; };
 		6376C8142499E78400B80BCB /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376C8132499E78400B80BCB /* secondViewController.swift */; };
 		63A052F3249CADBC00931F16 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A052F2249CADBC00931F16 /* ForthViewController.swift */; };
+		63A05314249CDFED00931F16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A05313249CDFED00931F16 /* HomeViewController.swift */; };
 		63F2419E24979D4000A9A917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F2419D24979D4000A9A917 /* AppDelegate.swift */; };
 		63F241A024979D4000A9A917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F2419F24979D4000A9A917 /* ViewController.swift */; };
 		63F241A324979D4000A9A917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63F241A124979D4000A9A917 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCollectionViewCell.swift; sourceTree = "<group>"; };
 		6376C8132499E78400B80BCB /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		63A052F2249CADBC00931F16 /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
+		63A05313249CDFED00931F16 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63F2419A24979D4000A9A917 /* task 1.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task 1.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F2419D24979D4000A9A917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63F2419F24979D4000A9A917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,9 +109,18 @@
 			path = "Forth View Controller";
 			sourceTree = "<group>";
 		};
+		63A05312249CDFC700931F16 /* Home View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63A05313249CDFED00931F16 /* HomeViewController.swift */,
+			);
+			path = "Home View Controller";
+			sourceTree = "<group>";
+		};
 		63F2419124979D4000A9A917 = {
 			isa = PBXGroup;
 			children = (
+				63A05312249CDFC700931F16 /* Home View Controller */,
 				63A052F1249CAD8A00931F16 /* Forth View Controller */,
 				63A052EE249C818D00931F16 /* Second View Controller */,
 				6373DD9B249B4399008C7E15 /* Third View Controller */,
@@ -297,6 +308,7 @@
 				6373DD9D249B43B5008C7E15 /* ThirdviewViewController.swift in Sources */,
 				6376C8142499E78400B80BCB /* secondViewController.swift in Sources */,
 				6373DD9F249B441C008C7E15 /* customCollectionViewCell.swift in Sources */,
+				63A05314249CDFED00931F16 /* HomeViewController.swift in Sources */,
 				63F2419E24979D4000A9A917 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
