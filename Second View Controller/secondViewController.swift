@@ -59,7 +59,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.isNavigationBarHidden = true
         self.pickerview.delegate = self
         self.pickerview.dataSource = self
 

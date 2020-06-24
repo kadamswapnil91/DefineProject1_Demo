@@ -66,9 +66,64 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
     
     
     @IBAction func btn_assignment4(_ sender: UIButton) {
-        let forthtview : ForthViewController = self.storyboard?.instantiateViewController(withIdentifier: "ForthViewController") as! ForthViewController
+       
         
-        self.navigationController?.pushViewController(forthtview, animated: true)
+        let tabBar = UITabBarController()
+        
+        
+        func TabBarC()
+        {
+            
+             //  navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
+           let firstVC = UIViewController()
+            firstVC.view.backgroundColor = UIColor.yellow
+            
+            let secondVC = UIViewController()
+            secondVC.view.backgroundColor = UIColor.green
+            
+            let thirdVC = UIViewController()
+            thirdVC.view.backgroundColor = UIColor.blue
+            
+            let item1 = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+            let item2 = UITabBarItem(tabBarSystemItem: .downloads , tag: 1)
+            let item3 = UITabBarItem(tabBarSystemItem: .history, tag: 2)
+            
+            
+            firstVC.tabBarItem = item1
+            secondVC.tabBarItem = item2
+            thirdVC.tabBarItem = item3
+            tabBar.viewControllers = [firstVC,secondVC,thirdVC]
+            
+            self.view.addSubview(tabBar.view)
+            
+            
+            // tabbar to exit
+            let button = UIButton.init(type: .system)
+            button.frame = CGRect(x: 90.0, y: 150.0, width: 200.0, height: 52.0)
+            button.setTitle("Back To Home Controller", for: .normal)
+            button.layer.borderWidth = 5
+            button.layer.borderColor = UIColor.white.cgColor
+            button.backgroundColor = UIColor.black
+            button.titleLabel?.textColor = UIColor.white
+            button.tintColor = UIColor.white
+            button.layer.cornerRadius = 15.0
+            
+           // button.addTarget(self, action: #selector(buttonClicked(_ :)), for: .touchUpInside)
+            self.view.addSubview(button)
+            
+            func buttonClicked(_ : UIButton)
+            {
+                let homeview : HomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                
+                self.navigationController?.pushViewController(homeview, animated: true)
+                
+                
+            }
+           
+        }
+        
+         TabBarC()
+
         
     }
     
@@ -80,8 +135,7 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
     }
 
 
-    @IBAction func btn_assignment6(_ sender: UIButton) {
-    }
+  
     
     
     
@@ -92,7 +146,7 @@ class HomeViewController: UIViewController,UISearchBarDelegate {
         super.viewDidLoad()
    let menutag = 0
         menuSidebar.isHidden = true
-
+           // self.navigationController?.isNavigationBarHidden = false
         // Do any additional setup after loading the view.
     }
 

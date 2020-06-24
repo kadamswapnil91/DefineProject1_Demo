@@ -41,15 +41,12 @@ class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        //self.navigationController?.isNavigationBarHidden = true
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -71,6 +68,21 @@ class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UIColle
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let imagedetail : collectiondataViewController = self.storyboard?.instantiateViewController(withIdentifier: "collectiondataViewController") as! collectiondataViewController
+        imagedetail.mainlbl = companynamearray[indexPath.row]
+        imagedetail.mainimage = companylogoarray[indexPath.row]
+        
+        
+        self.navigationController?.pushViewController(imagedetail, animated: true)
+       
+        
+
+        
+    }
+    
     
     
 }
