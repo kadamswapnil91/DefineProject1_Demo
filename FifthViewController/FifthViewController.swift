@@ -10,6 +10,19 @@ import UIKit
 
 class FifthViewController: UIViewController , Datapass {
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.revealViewController().revealToggle(animated: true)
+        btn_back5.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        
+    }
+    
+    @IBOutlet weak var btn_back5: UIButton!
+    
+    
     @IBAction func btn_BackToPrevious(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
@@ -45,29 +58,6 @@ class FifthViewController: UIViewController , Datapass {
         
     }
     
-    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // self.navigationController?.isNavigationBarHidden = true
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

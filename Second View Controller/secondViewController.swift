@@ -9,6 +9,21 @@
 import UIKit
 
 class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
+        
+        self.pickerview.delegate = self
+        self.pickerview.dataSource = self
+        self.revealViewController().revealToggle(animated: true)
+        btn_Back.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+     
+        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        
+        
+    }
   
    var weekarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
@@ -50,7 +65,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     @IBAction func btn_Savepickerdata(_ sender: Any)
     {
-        
+
         
       
         
@@ -60,15 +75,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //self.navigationController?.isNavigationBarHidden = true
-        self.revealViewController().revealToggle(animated: true)
-        self.pickerview.delegate = self
-        self.pickerview.dataSource = self
-      
-        
-    }
+
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -85,11 +92,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     @IBAction func btn_Back(_ sender: Any) {
         
-//        btn_Back.target = self.revealViewController()
-//        btn_Back.action = #selector(SWRevealViewController.revealToggle(_:))
-//        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
-        
-        self.navigationController?.popViewController(animated: true)
+
     }
     
 

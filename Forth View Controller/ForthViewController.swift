@@ -10,6 +10,17 @@ import UIKit
 
 class ForthViewController: UIViewController {
     
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        //self.navigationController?.isNavigationBarHidden = true
+    
+        
+        
+    }
+    
+    
     @IBAction func btn_BackToThird(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         
@@ -81,13 +92,7 @@ class ForthViewController: UIViewController {
 //    }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
-        
 
-        
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

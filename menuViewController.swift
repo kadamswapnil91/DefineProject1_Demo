@@ -16,15 +16,16 @@ class menuViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+ 
     
     @IBAction func btn_assignment1(_ sender: UIButton) {
-        let firstview : ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+      
+        if let ViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
+            let navController = UINavigationController(rootViewController: ViewController)
+            navController.setViewControllers([ViewController], animated:true)
+            self.revealViewController().setFront(navController, animated: true)
+        }
         
-        self.navigationController?.pushViewController(firstview, animated: true)
         print("Assignment 1 clicked")
         
     }
@@ -36,18 +37,29 @@ class menuViewController: UIViewController {
             navController.setViewControllers([secondViewController], animated:true)
             self.revealViewController().setFront(navController, animated: true)
         }
-        
+        print("Assignment 2 clicked")
     }
     
-    @IBAction func btn_assignment3(_ sender: UIButton) {
-        
-        let thirdtview : ThirdviewViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThirdviewViewController") as! ThirdviewViewController
-        
-        self.navigationController?.pushViewController(thirdtview, animated: true)
-        
+    @IBAction func btn_assignment3(_ sender: UIButton)
+    {
+        if let thirdViewController = self.storyboard?.instantiateViewController(withIdentifier: "ThirdviewViewController") as? ThirdviewViewController {
+            let navController = UINavigationController(rootViewController: thirdViewController)
+            navController.setViewControllers([thirdViewController], animated:true)
+            self.revealViewController().setFront(navController, animated: true)
+        }
+        print("Assignment 3 clicked")
+
+       
     }
     
-    @IBAction func btn_assignment4(_ sender: UIButton) {
+    @IBAction func btn_assignment4(_ sender: UIButton)
+    {
+//        if let ForthViewController = self.storyboard?.instantiateViewController(withIdentifier: "ForthViewController") as? ForthViewController {
+//            let navController = UINavigationController(rootViewController: ForthViewController)
+//            navController.setViewControllers([ForthViewController], animated:true)
+//            self.revealViewController().setFront(navController, animated: true)
+//        }
+        
         
         
         let tabBar = UITabBarController()
@@ -56,7 +68,7 @@ class menuViewController: UIViewController {
         func TabBarC()
         {
             
-            //  navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
+            
             let firstVC = UIViewController()
             firstVC.view.backgroundColor = UIColor.yellow
             
@@ -104,27 +116,19 @@ class menuViewController: UIViewController {
             
         }
         
-        TabBarC()
+      TabBarC()
         
     }
     
     @IBAction func btn_assignment5(_ sender: UIButton) {
         
-        let fifthdata : FifthViewController = self.storyboard?.instantiateViewController(withIdentifier: "FifthViewController") as! FifthViewController
-        
-        self.navigationController?.pushViewController(fifthdata, animated: true)
-        
-    }
-    
+        if let FifthViewController = self.storyboard?.instantiateViewController(withIdentifier: "FifthViewController") as? FifthViewController {
+            let navController = UINavigationController(rootViewController: FifthViewController)
+            navController.setViewControllers([FifthViewController], animated:true)
+            self.revealViewController().setFront(navController, animated: true)
+        }
+    print("Assignment 5 clicked")
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+}
 }

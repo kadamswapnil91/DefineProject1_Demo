@@ -11,6 +11,17 @@ import UIKit
 class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.revealViewController().revealToggle(animated: true)
+        btn_back3.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        
+        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+    }
+    
+    @IBOutlet weak var btn_back3: UIButton!
+    
     
     @IBAction func btn_NextToForth(_ sender: UIButton) {
         
@@ -39,12 +50,7 @@ class ThirdviewViewController: UIViewController,UICollectionViewDelegate,UIColle
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //self.navigationController?.isNavigationBarHidden = true
 
-        // Do any additional setup after loading the view.
-    }
 
  
     

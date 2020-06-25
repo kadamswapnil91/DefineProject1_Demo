@@ -16,13 +16,14 @@ class ViewController: UIViewController ,UITextFieldDelegate{
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//        btn_menuSWReal.target = self.revealViewController()
-//
-//        btn_menuSWReal.action = #selector(SWRevealViewController.revealToggle(_:))
-//         self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        self.revealViewController().revealToggle(animated: true)
+        btn_back1.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
+        
+        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
     }
     
+    @IBOutlet weak var btn_back1: UIButton!
     
     @IBOutlet weak var btn_next: UIButton!
     
