@@ -10,8 +10,14 @@ import UIKit
 
 class revealHomeViewController: UIViewController {
 
+    @IBOutlet weak var btn_menu: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        btn_menu.target = self.revealViewController()
+        btn_menu.action = #selector(SWRevealViewController.revealToggle(_:))
+         self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+       
 
         // Do any additional setup after loading the view.
     }

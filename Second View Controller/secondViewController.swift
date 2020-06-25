@@ -12,6 +12,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
   
    var weekarray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
+    @IBOutlet weak var btn_Back: UIButton!
     
     @IBAction func btn_NextToThird(_ sender: UIButton) {
 
@@ -49,7 +50,9 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     
     @IBAction func btn_Savepickerdata(_ sender: Any)
     {
-        self.lbl_dayshow.text = self.weekarray[self.pickerview.selectedRow(inComponent: (0))]
+        
+        
+      
         
     }
     
@@ -60,9 +63,10 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationController?.isNavigationBarHidden = true
+        self.revealViewController().revealToggle(animated: true)
         self.pickerview.delegate = self
         self.pickerview.dataSource = self
-
+      
         
     }
     
@@ -80,6 +84,10 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     }
     
     @IBAction func btn_Back(_ sender: Any) {
+        
+//        btn_Back.target = self.revealViewController()
+//        btn_Back.action = #selector(SWRevealViewController.revealToggle(_:))
+//        self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
         
         self.navigationController?.popViewController(animated: true)
     }

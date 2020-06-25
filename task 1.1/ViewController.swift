@@ -11,8 +11,17 @@ import UIKit
 class ViewController: UIViewController ,UITextFieldDelegate{
     
     
+    @IBOutlet weak var btn_menuSWReal: UIBarButtonItem!
     
-    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+//        btn_menuSWReal.target = self.revealViewController()
+//
+//        btn_menuSWReal.action = #selector(SWRevealViewController.revealToggle(_:))
+//         self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        
+    }
     
     
     @IBOutlet weak var btn_next: UIButton!
@@ -114,11 +123,7 @@ class ViewController: UIViewController ,UITextFieldDelegate{
     
     
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = false
-    }
+
     
     }
 

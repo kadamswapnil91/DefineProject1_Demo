@@ -10,8 +10,11 @@
 		6373DD9D249B43B5008C7E15 /* ThirdviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373DD9C249B43B5008C7E15 /* ThirdviewViewController.swift */; };
 		6373DD9F249B441C008C7E15 /* customCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */; };
 		6376C8142499E78400B80BCB /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6376C8132499E78400B80BCB /* secondViewController.swift */; };
+		6389458324A48E9D00641655 /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389458224A48E9D00641655 /* MainHomeViewController.swift */; };
+		638945C724A4B47A00641655 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 638945C524A4B47900641655 /* SWRevealViewController.m */; };
+		638945C924A4BD0600641655 /* revealHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638945C824A4BD0600641655 /* revealHomeViewController.swift */; };
+		638945CB24A4CA8B00641655 /* menuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638945CA24A4CA8B00641655 /* menuViewController.swift */; };
 		63A052F3249CADBC00931F16 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A052F2249CADBC00931F16 /* ForthViewController.swift */; };
-		63A05314249CDFED00931F16 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A05313249CDFED00931F16 /* HomeViewController.swift */; };
 		63C047F6249DEB8A00637B30 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C047F5249DEB8A00637B30 /* FifthViewController.swift */; };
 		63C047FE249DEC4D00637B30 /* fifthdataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C047FD249DEC4D00637B30 /* fifthdataViewController.swift */; };
 		63EAF1B624A2406D003E9694 /* collectiondataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EAF1B524A2406D003E9694 /* collectiondataViewController.swift */; };
@@ -45,8 +48,13 @@
 		6373DD9C249B43B5008C7E15 /* ThirdviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdviewViewController.swift; sourceTree = "<group>"; };
 		6373DD9E249B441C008C7E15 /* customCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCollectionViewCell.swift; sourceTree = "<group>"; };
 		6376C8132499E78400B80BCB /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
+		6389458224A48E9D00641655 /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
+		638945C424A4B47800641655 /* task 1.1-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "task 1.1-Bridging-Header.h"; sourceTree = "<group>"; };
+		638945C524A4B47900641655 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		638945C624A4B47A00641655 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		638945C824A4BD0600641655 /* revealHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = revealHomeViewController.swift; sourceTree = "<group>"; };
+		638945CA24A4CA8B00641655 /* menuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuViewController.swift; sourceTree = "<group>"; };
 		63A052F2249CADBC00931F16 /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
-		63A05313249CDFED00931F16 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		63C047F5249DEB8A00637B30 /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		63C047FD249DEC4D00637B30 /* fifthdataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthdataViewController.swift; sourceTree = "<group>"; };
 		63EAF1B524A2406D003E9694 /* collectiondataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectiondataViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +127,6 @@
 		63A05312249CDFC700931F16 /* Home View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63A05313249CDFED00931F16 /* HomeViewController.swift */,
 			);
 			path = "Home View Controller";
 			sourceTree = "<group>";
@@ -136,6 +143,7 @@
 		63C047FC249DEC1F00637B30 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				6389458224A48E9D00641655 /* MainHomeViewController.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -143,6 +151,8 @@
 		63F2419124979D4000A9A917 = {
 			isa = PBXGroup;
 			children = (
+				638945CA24A4CA8B00641655 /* menuViewController.swift */,
+				638945C824A4BD0600641655 /* revealHomeViewController.swift */,
 				63C047FC249DEC1F00637B30 /* New Group */,
 				63C047F4249DEB6200637B30 /* FifthViewController */,
 				63A05312249CDFC700931F16 /* Home View Controller */,
@@ -172,9 +182,12 @@
 				63F2419D24979D4000A9A917 /* AppDelegate.swift */,
 				63F2419F24979D4000A9A917 /* ViewController.swift */,
 				63F241A124979D4000A9A917 /* Main.storyboard */,
+				638945C624A4B47A00641655 /* SWRevealViewController.h */,
+				638945C524A4B47900641655 /* SWRevealViewController.m */,
 				63F241A424979D4700A9A917 /* Assets.xcassets */,
 				63F241A624979D4700A9A917 /* LaunchScreen.storyboard */,
 				63F241A924979D4700A9A917 /* Info.plist */,
+				638945C424A4B47800641655 /* task 1.1-Bridging-Header.h */,
 			);
 			path = "task 1.1";
 			sourceTree = "<group>";
@@ -265,6 +278,7 @@
 				TargetAttributes = {
 					63F2419924979D4000A9A917 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0930;
 					};
 					63F241AD24979D4700A9A917 = {
 						CreatedOnToolsVersion = 9.3.1;
@@ -333,11 +347,14 @@
 				6373DD9D249B43B5008C7E15 /* ThirdviewViewController.swift in Sources */,
 				63C047FE249DEC4D00637B30 /* fifthdataViewController.swift in Sources */,
 				6376C8142499E78400B80BCB /* secondViewController.swift in Sources */,
+				638945CB24A4CA8B00641655 /* menuViewController.swift in Sources */,
 				63C047F6249DEB8A00637B30 /* FifthViewController.swift in Sources */,
 				63EAF1B624A2406D003E9694 /* collectiondataViewController.swift in Sources */,
 				6373DD9F249B441C008C7E15 /* customCollectionViewCell.swift in Sources */,
-				63A05314249CDFED00931F16 /* HomeViewController.swift in Sources */,
+				6389458324A48E9D00641655 /* MainHomeViewController.swift in Sources */,
 				63F2419E24979D4000A9A917 /* AppDelegate.swift in Sources */,
+				638945C724A4B47A00641655 /* SWRevealViewController.m in Sources */,
+				638945C924A4BD0600641655 /* revealHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C78XHM8JG;
@@ -521,6 +539,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sap.task-1-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "task 1.1/task 1.1-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -530,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5C78XHM8JG;
@@ -541,6 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "sap.task-1-1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "task 1.1/task 1.1-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
