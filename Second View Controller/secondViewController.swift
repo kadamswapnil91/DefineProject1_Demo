@@ -66,7 +66,7 @@ class secondViewController: UIViewController,UIPickerViewDataSource,UIPickerView
     @IBAction func btn_Savepickerdata(_ sender: Any)
     {
 
-        
+        self.lbl_dayshow.text = self.weekarray[self.pickerview.selectedRow(inComponent: (0))]
       
         
     }
